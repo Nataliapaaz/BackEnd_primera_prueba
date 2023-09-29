@@ -1,0 +1,4 @@
+listaTv = []
+listaConsolas = []
+listaScooters = []
+listaBicicletas = []
