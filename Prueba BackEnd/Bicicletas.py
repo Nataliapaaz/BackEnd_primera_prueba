@@ -7,16 +7,15 @@ class Bicicletas(Transporte):
         self.__precio = precio
         self.__marca = marca
 
-    def calcular_descuento(self):
-        if self.eficiencia in ['A', 'B']:
-            return 0.5
-        elif self.eficiencia in ['C', 'D']:
-            return 0.3
-        elif self.eficiencia in ['E', 'F']:
-            return 0.1
-        else:
-            return 0
+    def get_precio(self):
+        return self.__precio
 
     def calcular_costo_despacho(self, precio):
-        return 4000 + self.__peso * precio
+        return 4000 + self.__peso * self.__precio
+    
+    def cotizar(self):
+        precio = self.get_precio() + calcul
+        return precio + self.__peso * precio
 
+    def __str__(self):
+        return f'Aro: {self.__aro} \n Peso: {self.__peso} \n Precio: {self.__precio} \n Marca: {self.__marca}'

@@ -13,3 +13,6 @@ class Scooters(Bicicletas, Tecnologia):
         costo_despacho = self.calcular_costo_despacho(300)  # Valor por kg para Scooter
         precio_total = precio_con_descuento + costo_despacho
         return f"Marca: {self.marca}\nVoltaje: {self.voltaje}\nEficiencia: {self.eficiencia}\nPrecio: ${self.precio}\nAro: {self.aro}\nVelocidad: {self.velocidad} km/h\nPeso: {self.peso} kg\nDescuento aplicado: {descuento_eficiencia * 100}%\nCosto de despacho: ${costo_despacho:}\nPrecio total: ${precio_total:}"
+    
+    def __str__(self):
+        return f'{super().__str__()} \n Velocidad: {self.__velocidad}'
