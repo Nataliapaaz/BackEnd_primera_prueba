@@ -9,3 +9,6 @@ class Tvs(Tecnologia):
         descuento_eficiencia = self.calcular_descuento()
         precio_con_descuento = self.__precio * (1 - descuento_eficiencia)
         return f"Marca: {self.__marca}\nVoltaje: {self.__voltaje}\nEficiencia: {self.__eficiencia}\nPrecio: ${self.__precio}\nTamaño: {self.__tamaño} pulgadas\nDescuento aplicado: {descuento_eficiencia * 100}%\nPrecio total: ${precio_con_descuento:}"
+    
+    def __str__(self):
+        return f'{super().__str__()} \n Tamaño {self.__tamaño}'

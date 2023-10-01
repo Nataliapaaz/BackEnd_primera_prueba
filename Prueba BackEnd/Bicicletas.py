@@ -1,9 +1,11 @@
-class Bicicletas:
+from Transporte import Transporte
+
+class Bicicletas(Transporte):
     def __init__(self, aro, peso, precio, marca):
-        self.aro = aro
-        self.peso = peso
-        self.precio = precio
-        self.marca = marca
+        self.__aro = aro
+        self.__peso = peso
+        self.__precio = precio
+        self.__marca = marca
 
     def calcular_descuento(self):
         if self.eficiencia in ['A', 'B']:
@@ -16,4 +18,5 @@ class Bicicletas:
             return 0
 
     def calcular_costo_despacho(self, precio):
-        return 4000 + self.peso * precio
+        return 4000 + self.__peso * precio
+

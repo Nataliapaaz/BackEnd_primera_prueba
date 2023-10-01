@@ -3,8 +3,9 @@ from Bicicletas import Bicicletas
 
 class Scooters(Bicicletas, Tecnologia):
     def __init__(self, marca, voltaje, eficiencia, precio, aro, velocidad, peso):
-        Bicicletas.__init__(self, aro, velocidad, peso)
-        Tecnologia.__init__(self, marca, voltaje, eficiencia, precio)
+        super().__init__(aro, peso, precio, marca)
+        super().__init__(marca, voltaje, eficiencia, precio)
+        self.__velocidad = velocidad
 
     def cotizar(self):
         descuento_eficiencia = self.calcular_descuento()

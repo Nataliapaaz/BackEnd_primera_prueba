@@ -20,13 +20,5 @@ class Tecnologia:
         precio_descuento = self.__precio - (self.__precio * descuento_eficiencia)
         return precio_descuento
     
-    def imprimir_informacion(self):
-        print("Información de Producto Tecnológico:")
-        print(f"Marca: {self.__marca}")
-        print(f"Voltaje: {self.__voltaje}")
-        print(f"Eficiencia: {self.__eficiencia}")
-        print(f"Precio: ${self.__precio:}")
-        descuento_eficiencia = self.calcular_descuento()
-        print(f"Descuento aplicado: {descuento_eficiencia * 100}%")
-        precio_con_descuento = self.__precio * (1 - descuento_eficiencia)
-        print(f"Precio total: ${precio_con_descuento:}")
+    def __str__(self):
+        return f"Información de Producto Tecnológico:\n Marca: {self.__marca} \n Voltaje: {self.__voltaje} \n Eficiencia: {self.__eficiencia}\n Precio: ${self.__precio:}\n descuento_eficiencia = {self.calcular_descuento()}\n Descuento aplicado: {self.obtener_precio_total()}"
