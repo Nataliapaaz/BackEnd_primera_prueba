@@ -69,7 +69,7 @@ def menu():
             precio = float(input("Ingrese el precio de la Bicicleta: "))
             marca = input("Ingrese la marca de la Bicicleta: ")
 
-            bicicleta = Bicicletas(aro, precio, peso, marca)
+            bicicleta = Bicicletas(aro, precio, peso, marca, 4000)
             listaBicicletas.append(bicicleta)
             costo_despacho = bicicleta.calcular_costo_despacho()
             print(f"Costo de despacho de la bicicleta: ${costo_despacho}")

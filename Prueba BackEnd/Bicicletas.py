@@ -26,11 +26,11 @@ class Bicicletas(Transporte):
         self.__marca
 
     def calcular_costo_despacho(self):
-        return 4000 + self.__peso * self.__precio
+        return 4000 + self.get_peso() * self.get_precio()
     
     def cotizar(self):
         precio = self.get_precio() + self.calcular_costo_despacho()
-        return precio
+        return f'Precio: {precio}'
 
     def __str__(self):
         return f'{super().__str__()} \n Precio {self.__precio}\n Aro: {self.__aro} \n Marca {self.__marca}'

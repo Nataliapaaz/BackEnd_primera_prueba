@@ -34,8 +34,8 @@ class Consolas(Tecnologia):
         
     def cotizar(self):
         descuento_eficiencia = self.calcular_descuento()
-        precio_con_descuento = self.__precio * (1 - descuento_eficiencia)
-        return f"Nombre: {self.__nombre}\nVoltaje: {self.__voltaje}\nEficiencia: {self.__eficiencia}\nPrecio: ${self.__precio}\nVersion: {self.__version} \nDescuento aplicado: {descuento_eficiencia * 100}%\nPrecio total: ${precio_con_descuento:}"
+        precio_con_descuento = self.get_precio() * (1 - descuento_eficiencia)
+        return f"Nombre: {self.get_nombre()}\nVoltaje: {self.get_voltaje()}\nEficiencia: {self.get_eficiencia()}\nPrecio: ${self.get_precio()}\nVersion: {self.get_version()} \nDescuento aplicado: {descuento_eficiencia * 100}%\nPrecio total: ${precio_con_descuento:}"
         
     def __str__(self):
         return f'{super().__str__()} \n Nombre: {self.__nombre} \n Version: {self.__version} \n Lite {self.__lite}'
