@@ -11,3 +11,6 @@ class Transporte:
 
     def get_desepacho(self):
         return self.__desepacho
+
+    def calcular_costo_despacho(self, peso):
+        return 4000 + self.__peso

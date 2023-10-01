@@ -55,11 +55,11 @@ def menu():
             voltaje = input("Voltaje: ")
             eficiencia = input("Nivel de eficiencia (A, B, C, D, E, F): ").upper()
             precio = float(input("Precio del scooter: "))
-            aro = int(input("Aro del scooter: "))
             velocidad = int(input("Velocidad del scooter (km/h): "))
             peso = float(input("Peso del scooter (kg): "))
+            despacho = 300
 
-            scooter = Scooters(marca, voltaje, eficiencia, precio, aro, velocidad, peso)
+            scooter = Scooters(marca, voltaje, eficiencia, precio, peso, despacho, velocidad)
             listaScooters.append(scooter)
             scooter.__str__()
 
