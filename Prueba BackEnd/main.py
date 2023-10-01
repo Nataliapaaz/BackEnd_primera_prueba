@@ -14,6 +14,8 @@ def menu():
     productos = listaBicicletas + listaConsolas + listaScooters + listaBicicletas
     total = 0
 
+    print("- B I E N V E N I D O -")
+
     while True:
         print("\nMenú:")
         print("1. Registrar TV")
