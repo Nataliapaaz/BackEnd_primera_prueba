@@ -5,6 +5,29 @@ class Tecnologia:
         self.__eficiencia = eficiencia
         self.__precio = precio
 
+    
+    def get_marca(self):
+        return self.__marca
+    
+    def set_marca(self, marca):
+        self.__marca = marca
+
+    def get_voltaje(self):
+        return self.__voltaje
+    
+    def set_voltaje(self, voltaje):
+        self.__voltaje = voltaje
+
+    def get_eficiencia(self):
+        return self.__eficiencia
+    
+    def get_precio(self):
+        return self.__precio
+    
+    def set_precio(self, precio):
+        self.__precio = precio
+    
+
     def calcular_descuento(self):
         if self.__eficiencia in ['A', 'B']:
             return 0.5

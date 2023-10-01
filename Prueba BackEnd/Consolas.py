@@ -7,6 +7,24 @@ class Consolas(Tecnologia):
         self.__version = version
         self.__lite = lite
 
+    def get_nombre(self):
+        return self.__nombre
+    
+    def set_nombre(self, nombre):
+        self.__nombre = nombre
+
+    def get_version(self):
+        return self.__version
+    
+    def set_version(self, version):
+        self.__version = version
+
+    def get_lite(self):
+        return self.__lite
+    
+    def set_lite(self, lite):
+        self.__lite = lite
+
     def calcular_descuento(self):
         descuento_eficiencia = super().calcular_descuento()
         if self.__lite:

@@ -5,6 +5,12 @@ class Tvs(Tecnologia):
         super().__init__(marca, voltaje, eficiencia, precio)
         self.__tamaño = tamaño
 
+    def get_tamaño(self):
+        return self.__tamaño
+    
+    def set_tamaño(self, tamaño):
+        self.__tamaño = tamaño
+
     def cotizar(self):
         descuento_eficiencia = self.calcular_descuento()
         precio_con_descuento = self.__precio * (1 - descuento_eficiencia)

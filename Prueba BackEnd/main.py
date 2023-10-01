@@ -12,7 +12,6 @@ def menu():
     listaConsolas = []
     listaScooters= []
     listaBicicletas= []
-    productos = listaBicicletas + listaConsolas + listaScooters + listaBicicletas
     total = 0
 
     print("- B I E N V E N I D O -")
@@ -97,7 +96,7 @@ def menu():
                 print("No se encontró ningún producto registrado.")
 
         elif opcion == "6":
-            print("¡Hasta luego!")
+            print("Hasta luego!")
             break
 
         else:
