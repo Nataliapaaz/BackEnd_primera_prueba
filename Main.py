@@ -1,4 +1,0 @@
-listaTv = []
-listaConsolas = []
-listaScooters = []
-listaBicicletas = []
